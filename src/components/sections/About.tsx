@@ -9,9 +9,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 const credentials = [
   { icon: "🎓", text: "Licenciada en Psicología Clínica", color: "from-turquoise to-turquoise-dark", bgColor: "bg-turquoise/10" },
-  { icon: "🧠", text: "Especialización en Terapia Cognitivo-Conductual", color: "from-primary to-primary-dark", bgColor: "bg-primary/10" },
-  { icon: "💫", text: "Certificación en Intervención en Crisis", color: "from-accent to-accent-light", bgColor: "bg-accent/10" },
-  { icon: "🌿", text: "Formación en Mindfulness y Bienestar", color: "from-secondary to-secondary-dark", bgColor: "bg-secondary/10" },
+  { icon: "🧒", text: "Especialización en Psicología Infantil y del Desarrollo", color: "from-primary to-primary-dark", bgColor: "bg-primary/10" },
+  { icon: "🎨", text: "Terapia de Juego y Técnicas Lúdicas", color: "from-accent to-accent-light", bgColor: "bg-accent/10" },
+  { icon: "🌿", text: "Formación en Mindfulness para Niños", color: "from-secondary to-secondary-dark", bgColor: "bg-secondary/10" },
 ];
 
 function About() {
@@ -91,15 +91,15 @@ function About() {
         <div ref={contentRef} className="text-center max-w-3xl mx-auto mb-16">
           <div className="badge mb-6">
             <span className="w-2 h-2 bg-turquoise rounded-full" />
-            Sobre Mí
+            Psicóloga Clínica
           </div>
-          <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl md:text-5xl font-bold text-dark mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-dark mb-6">
             Hola, soy <span className="text-gradient">Dayanna Vivanco</span>
           </h2>
           <p className="text-lg text-dark-light leading-relaxed">
-            Como psicóloga clínica, mi misión es acompañarte en tu camino hacia
-            el bienestar emocional. Creo firmemente que cada persona tiene la
-            capacidad de transformar su vida, y mi rol es ser tu guía en ese proceso.
+            Como psicóloga clínica, acompaño a personas en todas las etapas de la vida.
+            Mi pasión especial está en el mundo infantil: creo profundamente en el poder
+            del juego y la conexión para transformar la vida emocional de los pequeños y sus familias.
           </p>
         </div>
 
@@ -136,8 +136,8 @@ function About() {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-dark">+500</div>
-                    <div className="text-sm text-dark-light">Vidas transformadas</div>
+                    <div className="text-2xl font-bold text-dark">+300</div>
+                    <div className="text-sm text-dark-light">Niños acompañados</div>
                   </div>
                 </div>
               </div>
@@ -147,17 +147,17 @@ function About() {
           {/* Content side */}
           <div className="order-1 lg:order-2 space-y-8">
             <div className="bg-white rounded-3xl p-8 shadow-medium border border-turquoise/10">
-              <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-dark mb-4">
-                Mi enfoque terapéutico
+              <h3 className="text-2xl font-bold text-dark mb-4">
+                Mi enfoque con los niños
               </h3>
               <p className="text-dark-light leading-relaxed mb-6">
-                Mi enfoque es integrador, combinando técnicas cognitivo-conductuales
-                con herramientas de mindfulness y autocompasión. Trabajo con
-                adolescentes y adultos que buscan superar la ansiedad, la depresión,
-                manejar el estrés o simplemente conocerse mejor.
+                Mi enfoque es integrador: combino técnicas cognitivo-conductuales,
+                terapia de juego y mindfulness para atender a niños, adolescentes y
+                adultos. Mi mayor especialización está en la infancia — un período clave
+                donde la intervención oportuna hace toda la diferencia.
               </p>
               <div className="flex flex-wrap gap-2">
-                {["Empatía", "Confidencialidad", "Profesionalismo", "Calidez"].map((tag) => (
+                {["Empatía", "Juego terapéutico", "Enfoque familiar", "Calidez"].map((tag) => (
                   <span
                     key={tag}
                     className="px-4 py-2 bg-turquoise/10 rounded-full text-sm font-medium text-turquoise-deep"
@@ -176,7 +176,7 @@ function About() {
               </div>
               <div className="bg-gradient-to-br from-primary to-primary-dark rounded-2xl p-5 text-white">
                 <div className="text-3xl font-bold mb-1">98%</div>
-                <div className="text-white/80 text-sm">Satisfacción</div>
+                <div className="text-white/80 text-sm">Familias satisfechas</div>
               </div>
             </div>
           </div>

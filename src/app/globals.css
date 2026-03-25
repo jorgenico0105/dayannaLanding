@@ -28,8 +28,6 @@
   --color-success: #10B981;
   --color-error: #EF4444;
 
-  --font-playfair: "Playfair Display", serif;
-  --font-inter: "Inter", sans-serif;
   --font-poppins: "Poppins", sans-serif;
 
   --shadow-soft: 0 4px 20px rgba(45, 212, 191, 0.08);
@@ -339,6 +337,45 @@ textarea.input-field {
 
 select.input-field {
   cursor: pointer;
+}
+
+/* Dark section form inputs */
+.input-field-dark {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border-radius: 14px;
+  border: 1.5px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.06);
+  font-size: 1rem;
+  font-family: var(--font-poppins);
+  transition: all 0.25s ease;
+  outline: none;
+  color: white;
+}
+
+.input-field-dark:hover {
+  border-color: rgba(45, 212, 191, 0.4);
+}
+
+.input-field-dark:focus {
+  border-color: var(--color-turquoise);
+  box-shadow: 0 0 0 4px rgba(45, 212, 191, 0.12);
+  background: rgba(255,255,255,0.09);
+}
+
+.input-field-dark::placeholder {
+  color: rgba(255,255,255,0.3);
+}
+
+textarea.input-field-dark {
+  resize: vertical;
+  min-height: 150px;
+  line-height: 1.6;
+}
+
+select.input-field-dark {
+  cursor: pointer;
+  color-scheme: dark;
 }
 
 /* ============================================

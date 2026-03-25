@@ -4,16 +4,12 @@ import { useState, useEffect, useRef, memo } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AnimatedThinking from "@/components/ui/AnimatedThinking";
+import { postCitaPsicologa } from "@/services/http.service";
+import {FormData} from '@/app/interfaces/post-interfaces'
+
 
 gsap.registerPlugin(ScrollTrigger);
 
-interface FormData {
-  name: string;
-  email: string;
-  phone: string;
-  service: string;
-  message: string;
-}
 
 function Contact() {
   const [formData, setFormData] = useState<FormData>({
@@ -78,13 +74,17 @@ function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    setTimeout(() => {
+
+    try {
+      const resp = await postCitaPsicologa(formData)
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+    } catch (error) {
+      setIsSubmitting(false);
       setIsSubmitted(false);
-      setFormData({ name: "", email: "", phone: "", service: "", message: "" });
-    }, 3000);
+    }
+
+
   };
 
   return (
@@ -92,25 +92,25 @@ function Contact() {
       id="contacto"
       ref={sectionRef}
       className="section-padding relative overflow-hidden"
-      style={{ background: "linear-gradient(180deg, #F1F5F9 0%, #FEFEFE 100%)" }}
+      style={{ background: "linear-gradient(180deg, #0F172A 0%, #1E293B 50%, #0F172A 100%)" }}
     >
-      {/* Decorative elements */}
-      <div className="absolute top-20 left-0 w-80 h-80 bg-turquoise/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      {/* Decorative glows */}
+      <div className="absolute top-20 left-0 w-80 h-80 bg-turquoise/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-20 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="badge mb-6">
+          <div className="badge bg-turquoise/20 text-turquoise border-turquoise/30 mb-6">
             <span className="w-2 h-2 bg-turquoise rounded-full" />
             Contacto
           </div>
-          <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl md:text-5xl font-bold text-dark mb-6">
-            ¿Listo para <span className="text-gradient">comenzar</span>?
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">
+            ¿Listo para <span className="text-gradient">dar el primer paso</span>?
           </h2>
-          <p className="text-lg text-dark-light max-w-2xl mx-auto">
-            Da el primer paso hacia tu bienestar. Completa el formulario y me
-            pondré en contacto contigo lo antes posible.
+          <p className="text-lg text-white/60 max-w-2xl mx-auto">
+            Escríbeme y hablamos sin compromiso. Juntos encontraremos la mejor
+            forma de acompañar a tu hijo/a.
           </p>
         </div>
 
@@ -118,21 +118,21 @@ function Contact() {
           {/* Contact Info */}
           <div ref={infoRef} className="space-y-8">
             <div>
-              <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-dark mb-6">
+              <h3 className="text-2xl font-bold text-white mb-6">
                 Información de contacto
               </h3>
-              <p className="text-dark-light mb-8">
-                Estoy aquí para ayudarte. No dudes en contactarme por cualquiera de estos medios.
+              <p className="text-white/60 mb-8">
+                Estoy aquí para ayudar a tu familia. No dudes en contactarme por cualquiera de estos medios.
               </p>
             </div>
 
             <div className="space-y-4">
               {/* WhatsApp */}
               <a
-                href="https://wa.me/1234567890"
+                href="https://wa.me/593986627506"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 p-5 bg-white rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 group border border-transparent hover:border-turquoise/20"
+                className="flex items-center gap-4 p-5 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-turquoise/40 transition-all duration-300 group"
               >
                 <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-green-400 to-green-500 flex items-center justify-center text-white flex-shrink-0 group-hover:scale-105 transition-transform">
                   <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
@@ -140,31 +140,31 @@ function Contact() {
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <p className="text-dark font-semibold group-hover:text-turquoise transition-colors">
+                  <p className="text-white font-semibold group-hover:text-turquoise transition-colors">
                     WhatsApp
                   </p>
-                  <p className="text-dark-light text-sm">Respuesta rápida</p>
+                  <p className="text-white/50 text-sm">Respuesta rápida</p>
                 </div>
-                <svg className="w-5 h-5 text-dark-light group-hover:text-turquoise group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-white/30 group-hover:text-turquoise group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </a>
 
               {/* Schedule */}
-              <div className="flex items-center gap-4 p-5 bg-white rounded-2xl shadow-medium border border-accent/10">
+              <div className="flex items-center gap-4 p-5 bg-white/5 rounded-2xl border border-white/10">
                 <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent to-accent-light flex items-center justify-center text-white flex-shrink-0">
                   <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
                 <div>
-                  <p className="text-dark font-semibold">Horario de atención</p>
-                  <p className="text-dark-light text-sm">Lunes a Viernes: 9:00 - 19:00</p>
+                  <p className="text-white font-semibold">Horario de atención</p>
+                  <p className="text-white/50 text-sm">Lunes a Viernes: 9:00 - 19:00</p>
                 </div>
               </div>
 
               {/* Location */}
-              <div className="flex items-center gap-4 p-5 bg-white rounded-2xl shadow-medium border border-secondary/10">
+              <div className="flex items-center gap-4 p-5 bg-white/5 rounded-2xl border border-white/10">
                 <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary to-secondary-dark flex items-center justify-center text-white flex-shrink-0">
                   <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -172,19 +172,18 @@ function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-dark font-semibold">Modalidad</p>
-                  <p className="text-dark-light text-sm">Consultas presenciales y online</p>
+                  <p className="text-white font-semibold">Modalidad</p>
+                  <p className="text-white/50 text-sm">Consultas presenciales y online</p>
                 </div>
               </div>
             </div>
 
             {/* Decorative illustration */}
             <div className="hidden lg:block mt-8">
-              <div className="relative bg-gradient-to-br from-turquoise/10 to-primary/5 rounded-3xl p-8 flex items-center justify-center overflow-hidden">
+              <div className="relative bg-white/5 rounded-3xl p-8 flex items-center justify-center overflow-hidden border border-white/10">
                 <AnimatedThinking color="#2DD4BF" className="w-32 h-32" />
-                <div className="absolute inset-0 bg-gradient-to-t from-white/80 to-transparent" />
-                <p className="absolute bottom-4 left-0 right-0 text-center text-dark-light text-sm font-medium">
-                  Tu bienestar es mi prioridad
+                <p className="absolute bottom-4 left-0 right-0 text-center text-white/40 text-sm font-medium">
+                  El bienestar de tu hijo/a es mi prioridad
                 </p>
               </div>
             </div>
@@ -194,29 +193,29 @@ function Contact() {
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className="bg-white rounded-3xl shadow-large p-6 sm:p-8 md:p-10 lg:p-12 border border-turquoise/10"
+            className="bg-white/5 backdrop-blur-sm rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 border border-white/10"
           >
             {isSubmitted ? (
               <div className="h-full flex flex-col items-center justify-center text-center py-16">
-                <div className="w-20 h-20 rounded-full bg-turquoise/15 flex items-center justify-center mb-6">
+                <div className="w-20 h-20 rounded-full bg-turquoise/20 flex items-center justify-center mb-6">
                   <svg className="w-10 h-10 text-turquoise" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-dark mb-4">
+                <h3 className="text-2xl font-bold text-white mb-4">
                   ¡Mensaje enviado!
                 </h3>
-                <p className="text-dark-light max-w-sm leading-relaxed">
-                  Gracias por contactarme. Te responderé lo antes posible.
+                <p className="text-white/60 max-w-sm leading-relaxed">
+                  Gracias por contactarme. Me pondré en contacto contigo lo antes posible para ayudar a tu hijo/a.
                 </p>
               </div>
             ) : (
               <>
                 <div className="mb-8">
-                  <h3 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl font-bold text-dark mb-3">
-                    Envíame un mensaje
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
+                    Cuéntame sobre tu hijo/a
                   </h3>
-                  <p className="text-dark-light text-base md:text-lg">
+                  <p className="text-white/60 text-base md:text-lg">
                     Completa el formulario y te contactaré pronto.
                   </p>
                 </div>
@@ -225,7 +224,7 @@ function Contact() {
                   {/* Name & Email row */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
                     <div>
-                      <label htmlFor="name" className="form-label">
+                      <label htmlFor="name" className="form-label text-white/80">
                         Nombre completo
                       </label>
                       <input
@@ -235,13 +234,13 @@ function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="input-field"
+                        className="input-field-dark"
                         placeholder="Tu nombre"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="email" className="form-label">
+                      <label htmlFor="email" className="form-label text-white/80">
                         Email
                       </label>
                       <input
@@ -251,7 +250,7 @@ function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="input-field"
+                        className="input-field-dark"
                         placeholder="tu@email.com"
                       />
                     </div>
@@ -260,7 +259,7 @@ function Contact() {
                   {/* Phone & Service row */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
                     <div>
-                      <label htmlFor="phone" className="form-label">
+                      <label htmlFor="phone" className="form-label text-white/80">
                         Teléfono
                       </label>
                       <input
@@ -269,13 +268,13 @@ function Contact() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="input-field"
-                        placeholder="+1 234 567 890"
+                        className="input-field-dark"
+                        placeholder="+593 99 640 8836"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="service" className="form-label">
+                      <label htmlFor="service" className="form-label text-white/80">
                         Servicio de interés
                       </label>
                       <select
@@ -283,22 +282,23 @@ function Contact() {
                         name="service"
                         value={formData.service}
                         onChange={handleChange}
-                        className="input-field appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23475569%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-[length:20px] bg-[right_1rem_center] bg-no-repeat"
+                        className="input-field-dark appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%232DD4BF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-[length:20px] bg-[right_1rem_center] bg-no-repeat"
                       >
-                        <option value="">Selecciona un servicio</option>
-                        <option value="individual">Terapia Individual</option>
-                        <option value="pareja">Terapia de Pareja</option>
-                        <option value="ansiedad">Ansiedad y Depresión</option>
-                        <option value="estres">Manejo del Estrés</option>
-                        <option value="duelo">Duelo y Pérdida</option>
-                        <option value="autoestima">Autoestima</option>
+                        <option value="">Selecciona un motivo</option>
+                        <option value="juego">Terapia de Juego</option>
+                        <option value="ansiedad">Ansiedad Infantil</option>
+                        <option value="aprendizaje">Dificultades de Aprendizaje</option>
+                        <option value="social">Habilidades Sociales</option>
+                        <option value="familia">Cambios Familiares</option>
+                        <option value="autoestima">Autoestima y Confianza</option>
+                        <option value="otro">Otro</option>
                       </select>
                     </div>
                   </div>
 
                   {/* Message */}
                   <div>
-                    <label htmlFor="message" className="form-label">
+                    <label htmlFor="message" className="form-label text-white/80">
                       Mensaje
                     </label>
                     <textarea
@@ -308,7 +308,7 @@ function Contact() {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="input-field resize-none"
+                      className="input-field-dark resize-none"
                       placeholder="Cuéntame brevemente en qué puedo ayudarte..."
                     />
                   </div>

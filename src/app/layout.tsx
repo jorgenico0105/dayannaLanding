@@ -1,44 +1,31 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
-
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Dayanna Vivanco | Psicóloga Clínica",
+  title: "Dayanna Vivanco | Psicóloga Infantil",
   description:
-    "Psicóloga clínica especializada en terapia individual, de pareja, ansiedad, depresión y bienestar emocional. Agenda tu consulta hoy.",
+    "Psicóloga especializada en niños y familias. Acompañamos el desarrollo emocional, aprendizaje y bienestar de tus hijos. Agenda tu consulta hoy.",
   keywords: [
-    "psicóloga",
-    "psicología clínica",
-    "terapia",
-    "ansiedad",
-    "depresión",
-    "bienestar emocional",
-    "salud mental",
+    "psicóloga infantil",
+    "psicología niños",
+    "terapia infantil",
+    "bienestar emocional niños",
+    "ansiedad infantil",
+    "salud mental niños",
     "Dayanna Vivanco",
   ],
   openGraph: {
-    title: "Dayanna Vivanco | Psicóloga Clínica",
+    title: "Dayanna Vivanco | Psicóloga Infantil",
     description:
-      "Transforma tu bienestar emocional. Psicóloga clínica con enfoque personalizado.",
+      "Especialista en el bienestar emocional de niños y familias. Un espacio seguro y divertido para crecer.",
     type: "website",
     locale: "es_ES",
   },
@@ -52,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${playfair.variable} ${inter.variable} ${poppins.variable} antialiased`}
+        className={`${poppins.variable} antialiased`}
       >
         {children}
       </body>

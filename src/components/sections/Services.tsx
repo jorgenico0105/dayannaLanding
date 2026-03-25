@@ -8,44 +8,44 @@ gsap.registerPlugin(ScrollTrigger);
 
 const services = [
   {
-    title: "Terapia Individual",
-    description: "Espacio seguro para explorar tus emociones y alcanzar tus metas personales.",
-    icon: "👤",
+    title: "Terapia de Juego",
+    description: "A través del juego los niños expresan emociones y resuelven conflictos de forma natural y divertida.",
+    icon: "🎮",
     color: "from-turquoise to-turquoise-dark",
     hoverColor: "from-turquoise to-turquoise-deep",
   },
   {
-    title: "Terapia de Pareja",
-    description: "Mejora la comunicación y fortalece el vínculo con tu pareja.",
-    icon: "💑",
+    title: "Ansiedad Infantil",
+    description: "Herramientas prácticas para que tu hijo maneje miedos, preocupaciones y situaciones estresantes.",
+    icon: "🌟",
     color: "from-primary to-primary-dark",
     hoverColor: "from-primary-dark to-primary",
   },
   {
-    title: "Ansiedad y Depresión",
-    description: "Tratamiento especializado para recuperar tu calidad de vida.",
-    icon: "🌱",
+    title: "Dificultades de Aprendizaje",
+    description: "Apoyo especializado para niños con TDAH, dislexia u otras necesidades educativas especiales.",
+    icon: "📚",
     color: "from-accent to-accent-light",
     hoverColor: "from-accent-light to-accent",
   },
   {
-    title: "Manejo del Estrés",
-    description: "Desarrolla estrategias efectivas y técnicas de relajación.",
-    icon: "🧘",
+    title: "Habilidades Sociales",
+    description: "Desarrollamos la capacidad de relacionarse, comunicarse y hacer amigos de manera asertiva.",
+    icon: "🤝",
     color: "from-secondary to-secondary-dark",
     hoverColor: "from-secondary-dark to-secondary",
   },
   {
-    title: "Duelo y Pérdida",
-    description: "Acompañamiento compasivo en procesos de duelo.",
-    icon: "🕊️",
+    title: "Cambios Familiares",
+    description: "Acompañamiento en divorcios, llegada de hermanos, cambios de colegio y otras transiciones.",
+    icon: "🏡",
     color: "from-turquoise-dark to-turquoise-deep",
     hoverColor: "from-turquoise-deep to-turquoise-dark",
   },
   {
-    title: "Autoestima",
-    description: "Desarrolla una relación saludable contigo mismo.",
-    icon: "⭐",
+    title: "Autoestima y Confianza",
+    description: "Fortalecemos la imagen positiva de sí mismo para que tu hijo brille con seguridad.",
+    icon: "🌈",
     color: "from-primary-light to-primary",
     hoverColor: "from-primary to-primary-light",
   },
@@ -101,24 +101,24 @@ function Services() {
       id="servicios"
       ref={sectionRef}
       className="section-padding relative overflow-hidden"
-      style={{ background: "linear-gradient(180deg, #F1F5F9 0%, #FEFEFE 50%, #F0FDFA 100%)" }}
+      style={{ background: "linear-gradient(180deg, #0F172A 0%, #1E293B 50%, #0F172A 100%)" }}
     >
-      {/* Decorative */}
-      <div className="absolute top-1/2 left-0 w-72 h-72 bg-turquoise/5 rounded-full blur-3xl -translate-y-1/2" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      {/* Decorative glows */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-turquoise/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div ref={headerRef} className="text-center max-w-3xl mx-auto mb-16">
-          <div className="badge mb-6">
+          <div className="badge bg-turquoise/20 text-turquoise border-turquoise/30 mb-6">
             <span className="w-2 h-2 bg-turquoise rounded-full" />
             Servicios
           </div>
-          <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl md:text-5xl font-bold text-dark mb-6">
-            ¿En qué puedo <span className="text-gradient">ayudarte</span>?
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">
+            ¿En qué puedo <span className="text-gradient">ayudar a tu hijo/a</span>?
           </h2>
-          <p className="text-lg text-dark-light">
-            Ofrezco diferentes servicios adaptados a tus necesidades. Cada proceso es único y personalizado.
+          <p className="text-lg text-white/60">
+            Cada niño es único. Adapto cada proceso a su edad, personalidad y necesidades específicas.
           </p>
         </div>
 
@@ -127,20 +127,20 @@ function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative bg-white rounded-3xl p-8 shadow-medium hover:shadow-large transition-all duration-400 overflow-hidden border border-transparent hover:border-turquoise/20"
+              className="group relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 hover:border-turquoise/40 transition-all duration-400 overflow-hidden"
             >
               {/* Gradient overlay on hover */}
               <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-100 transition-opacity duration-400 rounded-3xl`} />
 
               {/* Content */}
               <div className="relative z-10">
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center text-3xl mb-6 group-hover:bg-white/20 group-hover:scale-110 transition-all duration-300`}>
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-all duration-300`}>
                   {service.icon}
                 </div>
-                <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-dark group-hover:text-white mb-3 transition-colors">
+                <h3 className="text-xl font-bold text-white mb-3">
                   {service.title}
                 </h3>
-                <p className="text-dark-light group-hover:text-white/90 transition-colors leading-relaxed mb-6">
+                <p className="text-white/60 group-hover:text-white/90 transition-colors leading-relaxed mb-6">
                   {service.description}
                 </p>
 

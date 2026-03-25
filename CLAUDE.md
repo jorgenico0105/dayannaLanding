@@ -52,6 +52,13 @@ npm run lint     # Run ESLint
 - `SkyDivingClouds.tsx`: CSS-based animated clouds with configurable intensity (light/medium/heavy)
 - `ChatModal.tsx`: Fullscreen chat modal with dark theme, opened via ChatPlaceholder section
 - `AnimatedBrain.tsx` / `AnimatedThinking.tsx`: SVG animations with GSAP stroke-dasharray technique
+- `FluidRender.tsx`: Raw WebGL fluid noise animation (simplex noise shader, no Three.js). Accepts `config` prop with `c1`, `c2`, `bg` (RGB tuples), `speed`, `comp`, `scale`, `elev`, `gloss` params
+- `src/components/3d/`: Also contains `Clouds.tsx`, `CloudsScene.tsx`, `ImaginationModel.tsx` (Three.js/R3F based, not currently used in main page)
+
+### Contact Form & Backend
+- `src/app/interfaces/post-interfaces.ts`: `FormData` interface (name, email, phone, service, message)
+- `src/services/http.service.ts`: `postCitaPsicologa(body)` — POSTs to n8n webhook via axios
+- Contact form uses `.input-field-dark` CSS class (dark variant of `.input-field`)
 
 ### Assets
 - `/assets/img.webp` - Used in Hero section
@@ -59,4 +66,4 @@ npm run lint     # Run ESLint
 - `/assets/brain.svg`, `/assets/thinking.svg` - Source SVGs (inline versions in components)
 
 ### WhatsApp Integration
-Floating WhatsApp button in `page.tsx` links to `wa.me/1234567890` (placeholder number)
+WhatsApp number `593986627506` is set in `Contact.tsx`. The floating button in `page.tsx` may still use a placeholder — verify before deploying.

@@ -11,10 +11,10 @@ const quickLinks = [
 ];
 
 const services = [
-  "Terapia Individual",
-  "Terapia de Pareja",
-  "Ansiedad y Depresión",
-  "Manejo del Estrés",
+  "Terapia de Juego",
+  "Ansiedad Infantil",
+  "Dificultades de Aprendizaje",
+  "Habilidades Sociales",
 ];
 
 function Footer() {
@@ -31,16 +31,16 @@ function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-1 mb-4">
-              <span className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-white">
+              <span className="text-2xl font-extrabold text-white">
                 Dayanna
               </span>
-              <span className="font-[family-name:var(--font-playfair)] text-2xl text-turquoise">
+              <span className="text-2xl font-extrabold text-turquoise">
                 .
               </span>
             </div>
             <p className="text-white/60 text-sm leading-relaxed">
-              Psicóloga clínica comprometida con tu bienestar emocional y salud mental.
-              Atención personalizada y profesional.
+              Psicóloga infantil comprometida con el bienestar emocional de los niños
+              y sus familias. Atención personalizada y cercana.
             </p>
             {/* Social Links */}
             <div className="flex gap-3 mt-6">
@@ -76,7 +76,7 @@ function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-[family-name:var(--font-playfair)] text-lg font-semibold mb-6">
+            <h3 className="text-lg font-bold mb-6">
               Enlaces Rápidos
             </h3>
             <ul className="space-y-3">
@@ -95,7 +95,7 @@ function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-[family-name:var(--font-playfair)] text-lg font-semibold mb-6">
+            <h3 className="text-lg font-bold mb-6">
               Servicios
             </h3>
             <ul className="space-y-3">
@@ -109,7 +109,7 @@ function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-[family-name:var(--font-playfair)] text-lg font-semibold mb-6">
+            <h3 className="text-lg font-bold mb-6">
               Contacto
             </h3>
             <ul className="space-y-4">
@@ -119,7 +119,7 @@ function Footer() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
-                <span className="text-white/60">+1 234 567 890</span>
+                <span className="text-white/60">098-662-7506</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="w-8 h-8 rounded-lg bg-turquoise/20 flex items-center justify-center flex-shrink-0">
@@ -139,7 +139,7 @@ function Footer() {
         {/* Bottom */}
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white/40 text-sm">
-            © {currentYear} Dayanna Vivanco - Psicóloga Clínica. Todos los derechos reservados.
+            © {currentYear} Dayanna Vivanco - Psicóloga Infantil. Todos los derechos reservados.
           </p>
           <div className="flex items-center gap-2 text-white/40 text-sm">
             <span>Hecho con</span>

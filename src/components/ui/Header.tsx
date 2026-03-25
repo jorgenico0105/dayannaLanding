@@ -35,10 +35,10 @@ function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#inicio" className="flex items-center gap-1 group">
-            <span className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-dark group-hover:text-turquoise transition-colors">
+            <span className="text-2xl font-extrabold text-dark group-hover:text-turquoise transition-colors">
               Dayanna
             </span>
-            <span className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-turquoise">
+            <span className="text-2xl font-extrabold text-turquoise">
               .
             </span>
           </a>

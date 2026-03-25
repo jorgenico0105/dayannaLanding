@@ -8,28 +8,28 @@ gsap.registerPlugin(ScrollTrigger);
 
 const faqs = [
   {
+    question: "¿A partir de qué edad pueden venir los niños?",
+    answer: "Trabajo con niños desde los 3 años. Para los más pequeños (3-5 años) utilizamos principalmente terapia de juego. A partir de los 6 años incorporamos técnicas más variadas adaptadas a su nivel de desarrollo.",
+  },
+  {
     question: "¿Cómo es la primera consulta?",
-    answer: "La primera consulta es un espacio de conocimiento mutuo donde conversamos sobre tu motivo de consulta, tu historia personal y tus expectativas. Es un momento para que te sientas cómodo/a y podamos establecer los objetivos de la terapia juntos.",
+    answer: "La primera sesión es una reunión con los padres o cuidadores, sin el niño presente. Conversamos sobre las preocupaciones, la historia del niño y los objetivos. Esto me permite diseñar un plan adaptado antes de conocer al pequeño.",
   },
   {
-    question: "¿Cuánto dura cada sesión?",
-    answer: "Cada sesión tiene una duración de 50 minutos aproximadamente. Este tiempo está diseñado para permitir un trabajo profundo sin generar agotamiento emocional.",
+    question: "¿Participan los padres en el proceso?",
+    answer: "Sí, los padres son parte fundamental de la terapia. Realizamos sesiones de retroalimentación periódicas para que en casa refuercen lo trabajado en consulta. La familia y la psicóloga somos un equipo.",
   },
   {
-    question: "¿Con qué frecuencia debo asistir?",
-    answer: "Generalmente recomiendo sesiones semanales al inicio del proceso. A medida que avanzamos, podemos espaciar las sesiones según tus necesidades y evolución.",
+    question: "¿Cuánto dura cada sesión y con qué frecuencia?",
+    answer: "Las sesiones duran 45 minutos y generalmente se realizan una vez por semana. A medida que el niño progresa podemos espaciarlas. Cada caso es diferente y lo ajustamos juntos.",
   },
   {
     question: "¿Las sesiones son presenciales u online?",
-    answer: "Ofrezco ambas modalidades. Las sesiones online son igual de efectivas y te permiten acceder a la terapia desde cualquier lugar. Tú eliges la opción que mejor se adapte a ti.",
-  },
-  {
-    question: "¿Cómo sé si necesito terapia?",
-    answer: "Si sientes que algo no está bien en tu vida emocional, si tienes dificultades para manejar situaciones cotidianas o simplemente quieres conocerte mejor, la terapia puede ayudarte.",
+    answer: "Ofrezco ambas modalidades. Las sesiones online son especialmente útiles para niños mayores de 7 años y para sesiones de orientación a padres. Tú eliges lo que mejor se adapte a la familia.",
   },
   {
     question: "¿La información es confidencial?",
-    answer: "Absolutamente. Todo lo que compartimos en sesión está protegido por el secreto profesional. Tu privacidad y confianza son fundamentales para el proceso terapéutico.",
+    answer: "Absolutamente. Todo lo tratado en sesión está protegido por el secreto profesional. Comparto información con los padres solo en la medida necesaria para el bienestar del niño, siempre de forma respetuosa.",
   },
 ];
 
@@ -173,11 +173,11 @@ function FAQ() {
             <span className="w-2 h-2 bg-turquoise rounded-full" />
             FAQ
           </div>
-          <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl md:text-5xl font-bold text-dark mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-dark mb-6">
             Preguntas <span className="text-gradient">Frecuentes</span>
           </h2>
           <p className="text-lg text-dark-light max-w-2xl mx-auto">
-            Aquí encontrarás respuestas a las dudas más comunes sobre el proceso terapéutico.
+            Sabemos que como papá o mamá tienes muchas dudas. Aquí resolvemos las más comunes.
           </p>
         </div>
 

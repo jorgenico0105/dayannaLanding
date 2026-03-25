@@ -84,13 +84,13 @@ function ChatPlaceholder() {
               <span className="w-2 h-2 bg-turquoise rounded-full animate-pulse" />
               Asistente IA
             </div>
-            <h2 className="font-[family-name:var(--font-playfair)] text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
-              Tu compañero de{" "}
-              <span className="text-gradient">bienestar 24/7</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">
+              Orientación para padres{" "}
+              <span className="text-gradient">24/7</span>
             </h2>
             <p className="text-white/60 text-lg max-w-2xl mx-auto">
-              Accede a un asistente inteligente para resolver dudas rápidas sobre
-              psicología y bienestar emocional, disponible cuando lo necesites.
+              Resuelve dudas rápidas sobre el comportamiento y las emociones de tu hijo/a
+              con nuestro asistente inteligente, disponible cuando lo necesites.
             </p>
           </div>
 
@@ -122,7 +122,7 @@ function ChatPlaceholder() {
                   </div>
                   <div className="bg-white/10 rounded-2xl rounded-tl-sm px-4 py-3 max-w-[80%]">
                     <p className="text-white/90 text-sm">
-                      ¡Hola! Soy tu asistente de bienestar. ¿En qué puedo ayudarte hoy?
+                      ¡Hola! Soy el asistente de Dayanna. ¿Tienes alguna duda sobre tu hijo/a?
                     </p>
                   </div>
                 </div>
@@ -131,7 +131,7 @@ function ChatPlaceholder() {
                 <div className="flex gap-3 justify-end">
                   <div className="bg-gradient-to-br from-turquoise to-turquoise-dark rounded-2xl rounded-tr-sm px-4 py-3 max-w-[80%]">
                     <p className="text-white text-sm">
-                      Me gustaría saber más sobre el manejo de la ansiedad...
+                      Mi hijo tiene miedo de ir al colegio, ¿qué puedo hacer?
                     </p>
                   </div>
                 </div>
