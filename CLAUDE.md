@@ -28,6 +28,8 @@ npm run lint     # Run ESLint
 - Turquoise Dark: `#14B8A6` (hover states)
 - Turquoise Deep: `#0D9488` (text accents)
 - Primary/Coral: `#E8747C` (secondary accent)
+- Secondary/Blue-grey: `#7C9EB2`
+- Accent/Orange: `#F4A261`
 - Dark: `#1E293B` (text, headers)
 - Light: `#FEFEFE` / `#F1F5F9` / `#F0FDFA` (backgrounds)
 
@@ -57,13 +59,13 @@ npm run lint     # Run ESLint
 
 ### Contact Form & Backend
 - `src/app/interfaces/post-interfaces.ts`: `FormData` interface (name, email, phone, service, message)
-- `src/services/http.service.ts`: `postCitaPsicologa(body)` — POSTs to n8n webhook via axios
-- Contact form uses `.input-field-dark` CSS class (dark variant of `.input-field`)
+- `src/services/http.service.ts`: `postCitaPsicologa(body)` — POSTs to n8n webhook at `https://nico0105.app.n8n.cloud/webhook/paciente-dayanna` via axios
 
 ### Assets
+- `/assets/T1.svg`, `/assets/T2.svg` - Logo SVGs; `T2.svg` is used in `Header.tsx`
 - `/assets/img.webp` - Used in Hero section
 - `/assets/Dayanna.jpeg` - Used in About section
 - `/assets/brain.svg`, `/assets/thinking.svg` - Source SVGs (inline versions in components)
 
 ### WhatsApp Integration
-WhatsApp number `593986627506` is set in `Contact.tsx`. The floating button in `page.tsx` may still use a placeholder — verify before deploying.
+WhatsApp number `593986627506` is used consistently in both `Contact.tsx` (info card) and the floating button in `page.tsx`.

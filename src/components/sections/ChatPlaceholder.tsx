@@ -78,7 +78,7 @@ function ChatPlaceholder() {
           <AnimatedBrain color="#E8747C" className="w-full h-full" />
         </div>
 
-        <div className="max-w-5xl mx-auto relative z-10">
+        <div className="max-w-2xl mx-auto relative z-10">
           <div ref={contentRef} className="text-center mb-12">
             <div className="badge bg-turquoise/20 text-turquoise border-turquoise/30 mb-6">
               <span className="w-2 h-2 bg-turquoise rounded-full animate-pulse" />

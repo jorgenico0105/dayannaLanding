@@ -8,15 +8,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 const services = [
   {
-    title: "Terapia de Juego",
-    description: "A través del juego los niños expresan emociones y resuelven conflictos de forma natural y divertida.",
-    icon: "🎮",
+    title: "Ansiedad y Depresión",
+    description: "Acompañamiento terapéutico para gestionar la ansiedad y la depresión, fortaleciendo herramientas emocionales y promoviendo el bienestar mental.",
+    icon: "🧠",
     color: "from-turquoise to-turquoise-dark",
     hoverColor: "from-turquoise to-turquoise-deep",
   },
   {
-    title: "Ansiedad Infantil",
-    description: "Herramientas prácticas para que tu hijo maneje miedos, preocupaciones y situaciones estresantes.",
+    title: "Regulación Emocional",
+    description: "Herramientas prácticas para que el paciente maneje miedos, preocupaciones y situaciones estresantes.",
     icon: "🌟",
     color: "from-primary to-primary-dark",
     hoverColor: "from-primary-dark to-primary",
@@ -115,10 +115,10 @@ function Services() {
             Servicios
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-6">
-            ¿En qué puedo <span className="text-gradient">ayudar a tu hijo/a</span>?
+            ¿En qué puedo <span className="text-gradient">ayudarte</span>?
           </h2>
           <p className="text-lg text-white/60">
-            Cada niño es único. Adapto cada proceso a su edad, personalidad y necesidades específicas.
+            Cada persona es única. Adapto cada proceso a su edad, personalidad y necesidades específicas.
           </p>
         </div>
 

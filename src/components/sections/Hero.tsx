@@ -75,7 +75,7 @@ function Hero() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-24 relative z-[3] text-center">
         <div className="badge mb-6 mx-auto">
           <span className="w-2 h-2 bg-turquoise rounded-full animate-pulse" />
-          Psicóloga Clínica · Especialista en Infancia
+          Psicóloga Clínica · Especialista en infancia, adolescencia y adultez joven.
         </div>
 
         <h1
@@ -90,9 +90,7 @@ function Hero() {
           ref={subtitleRef}
           className="text-lg sm:text-xl text-dark-light leading-relaxed mb-10 max-w-2xl mx-auto"
         >
-          Soy Dayanna Vivanco, psicóloga clínica con especial dedicación
-          al mundo infantil. Acompaño a niños, familias y adultos en su
-          camino hacia el bienestar emocional con calidez y profesionalismo.
+         Soy Dayanna Vivanco, psicóloga clínica enfocada en el acompañamiento de niños, adolescentes y adultos. Mi propósito es brindar un espacio seguro donde cada persona pueda sentirse escuchada, comprendida y acompañada en su camino hacia el bienestar emocional.
         </p>
 
         <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4 justify-center mb-16">

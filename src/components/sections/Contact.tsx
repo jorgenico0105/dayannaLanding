@@ -110,7 +110,7 @@ function Contact() {
           </h2>
           <p className="text-lg text-white/60 max-w-2xl mx-auto">
             Escríbeme y hablamos sin compromiso. Juntos encontraremos la mejor
-            forma de acompañar a tu hijo/a.
+            forma de acompañarte. Estoy aqui para acompañarte.
           </p>
         </div>
 
@@ -159,7 +159,8 @@ function Contact() {
                 </div>
                 <div>
                   <p className="text-white font-semibold">Horario de atención</p>
-                  <p className="text-white/50 text-sm">Lunes a Viernes: 9:00 - 19:00</p>
+                  <p className="text-white/50 text-sm">Lunes a Viernes: 8:00 - 19:00</p>
+                  <p className="text-white/50 text-sm">Sabados: 8:00 - 13:00</p>
                 </div>
               </div>
 
@@ -183,7 +184,7 @@ function Contact() {
               <div className="relative bg-white/5 rounded-3xl p-8 flex items-center justify-center overflow-hidden border border-white/10">
                 <AnimatedThinking color="#2DD4BF" className="w-32 h-32" />
                 <p className="absolute bottom-4 left-0 right-0 text-center text-white/40 text-sm font-medium">
-                  El bienestar de tu hijo/a es mi prioridad
+                  Tu bienestar es mi prioridad.
                 </p>
               </div>
             </div>
@@ -213,7 +214,7 @@ function Contact() {
               <>
                 <div className="mb-8">
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                    Cuéntame sobre tu hijo/a
+                    Cuéntame sobre ti. 
                   </h3>
                   <p className="text-white/60 text-base md:text-lg">
                     Completa el formulario y te contactaré pronto.

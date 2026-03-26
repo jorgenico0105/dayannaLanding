@@ -35,12 +35,12 @@ function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#inicio" className="flex items-center gap-1 group">
-            <span className="text-2xl font-extrabold text-dark group-hover:text-turquoise transition-colors">
-              Dayanna
-            </span>
-            <span className="text-2xl font-extrabold text-turquoise">
-              .
-            </span>
+                   <img
+                    src="/assets/T5.svg"
+                    alt="Dayanna Vivanco - Psicóloga Clínica"
+                    className="h-13 w-auto"
+                    loading="lazy"
+                  />
           </a>
 
           {/* Desktop Navigation */}

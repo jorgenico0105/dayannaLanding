@@ -11,8 +11,8 @@ const quickLinks = [
 ];
 
 const services = [
-  "Terapia de Juego",
-  "Ansiedad Infantil",
+  "Ansiedad y Depresión",
+  "Regulación Emocional",
   "Dificultades de Aprendizaje",
   "Habilidades Sociales",
 ];
@@ -31,16 +31,15 @@ function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-1 mb-4">
-              <span className="text-2xl font-extrabold text-white">
-                Dayanna
-              </span>
-              <span className="text-2xl font-extrabold text-turquoise">
-                .
-              </span>
+                     <img
+                    src="/assets/T5.svg"
+                    alt="Dayanna Vivanco - Psicóloga Clínica"
+                    className="h-13 w-auto"
+                    loading="lazy"
+                  />  
             </div>
             <p className="text-white/60 text-sm leading-relaxed">
-              Psicóloga infantil comprometida con el bienestar emocional de los niños
-              y sus familias. Atención personalizada y cercana.
+              Psicóloga Clínica con orientación a niños, adolescentes y adultos jóvenes. Atención personalizada y cercana.
             </p>
             {/* Social Links */}
             <div className="flex gap-3 mt-6">
@@ -139,7 +138,7 @@ function Footer() {
         {/* Bottom */}
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white/40 text-sm">
-            © {currentYear} Dayanna Vivanco - Psicóloga Infantil. Todos los derechos reservados.
+            © {currentYear} Dayanna Vivanco - Psicóloga Clinica. Todos los derechos reservados.
           </p>
           <div className="flex items-center gap-2 text-white/40 text-sm">
             <span>Hecho con</span>

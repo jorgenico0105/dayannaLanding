@@ -8,21 +8,22 @@ gsap.registerPlugin(ScrollTrigger);
 
 const faqs = [
   {
-    question: "¿A partir de qué edad pueden venir los niños?",
-    answer: "Trabajo con niños desde los 3 años. Para los más pequeños (3-5 años) utilizamos principalmente terapia de juego. A partir de los 6 años incorporamos técnicas más variadas adaptadas a su nivel de desarrollo.",
+    question: "¿Cómo es la primera consulta?",
+    answer: "La primera sesión es un espacio de encuentro y confianza, donde se explora el motivo de consulta, se realizan preguntas y se definen objetivos. No necesitas prepararte previamente para asistir, únicamente tu predisposición.",
+  },
+  { 
+    question: "¿Cuánto dura cada sesión y con qué frecuencia?",
+    answer: "Las sesiones duran entre 45 - 60 minutos y generalmente se realizan una vez por semana. A medida que el paciente progresa podemos espaciarlas. Cada caso es diferente y lo ajustamos juntos.",
   },
   {
-    question: "¿Cómo es la primera consulta?",
-    answer: "La primera sesión es una reunión con los padres o cuidadores, sin el niño presente. Conversamos sobre las preocupaciones, la historia del niño y los objetivos. Esto me permite diseñar un plan adaptado antes de conocer al pequeño.",
+    question: "¿A partir de qué edad pueden venir?",
+    answer: "Trabajo con niños desde los 4 años. Para los más pequeños (4-5 años) utilizamos principalmente terapia de juego. Adolescentes y adultos jóvenes. ",
   },
   {
     question: "¿Participan los padres en el proceso?",
     answer: "Sí, los padres son parte fundamental de la terapia. Realizamos sesiones de retroalimentación periódicas para que en casa refuercen lo trabajado en consulta. La familia y la psicóloga somos un equipo.",
   },
-  {
-    question: "¿Cuánto dura cada sesión y con qué frecuencia?",
-    answer: "Las sesiones duran 45 minutos y generalmente se realizan una vez por semana. A medida que el niño progresa podemos espaciarlas. Cada caso es diferente y lo ajustamos juntos.",
-  },
+
   {
     question: "¿Las sesiones son presenciales u online?",
     answer: "Ofrezco ambas modalidades. Las sesiones online son especialmente útiles para niños mayores de 7 años y para sesiones de orientación a padres. Tú eliges lo que mejor se adapte a la familia.",
@@ -57,11 +58,10 @@ const FAQItem = memo(function FAQItem({ question, answer, isOpen, onClick, index
 
   return (
     <div
-      className={`rounded-2xl transition-all duration-300 ${
-        isOpen
+      className={`rounded-2xl transition-all duration-300 ${isOpen
           ? "bg-gradient-to-br from-turquoise to-turquoise-dark shadow-turquoise"
           : "bg-white shadow-medium hover:shadow-large border border-turquoise/10 hover:border-turquoise/25"
-      }`}
+        }`}
     >
       <button
         onClick={onClick}
@@ -70,24 +70,21 @@ const FAQItem = memo(function FAQItem({ question, answer, isOpen, onClick, index
       >
         <div className="flex items-center gap-4 md:gap-5 flex-1 min-w-0">
           <span
-            className={`w-11 h-11 md:w-12 md:h-12 rounded-xl flex items-center justify-center font-bold text-sm flex-shrink-0 transition-all duration-300 ${
-              isOpen ? "bg-white/20 text-white" : "bg-turquoise/10 text-turquoise"
-            }`}
+            className={`w-11 h-11 md:w-12 md:h-12 rounded-xl flex items-center justify-center font-bold text-sm flex-shrink-0 transition-all duration-300 ${isOpen ? "bg-white/20 text-white" : "bg-turquoise/10 text-turquoise"
+              }`}
           >
             {String(index + 1).padStart(2, "0")}
           </span>
           <span
-            className={`font-semibold text-base md:text-lg transition-colors leading-snug ${
-              isOpen ? "text-white" : "text-dark"
-            }`}
+            className={`font-semibold text-base md:text-lg transition-colors leading-snug ${isOpen ? "text-white" : "text-dark"
+              }`}
           >
             {question}
           </span>
         </div>
         <div
-          className={`w-10 h-10 md:w-11 md:h-11 rounded-xl flex items-center justify-center transition-all duration-300 flex-shrink-0 ${
-            isOpen ? "bg-white/20 rotate-180" : "bg-turquoise/10 hover:bg-turquoise/20"
-          }`}
+          className={`w-10 h-10 md:w-11 md:h-11 rounded-xl flex items-center justify-center transition-all duration-300 flex-shrink-0 ${isOpen ? "bg-white/20 rotate-180" : "bg-turquoise/10 hover:bg-turquoise/20"
+            }`}
         >
           <svg
             className={`w-5 h-5 transition-colors ${isOpen ? "text-white" : "text-turquoise"}`}
@@ -166,7 +163,7 @@ function FAQ() {
       <div className="absolute top-20 right-0 w-80 h-80 bg-turquoise/5 rounded-full blur-3xl" />
       <div className="absolute bottom-20 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
 
-      <div className="max-w-4xl mx-auto relative z-10">
+      <div className="max-w-2xl mx-auto relative z-10">
         {/* Header */}
         <div ref={headerRef} className="text-center mb-12 md:mb-16">
           <div className="badge mb-6">
@@ -177,7 +174,7 @@ function FAQ() {
             Preguntas <span className="text-gradient">Frecuentes</span>
           </h2>
           <p className="text-lg text-dark-light max-w-2xl mx-auto">
-            Sabemos que como papá o mamá tienes muchas dudas. Aquí resolvemos las más comunes.
+            Sabemos que tienes muchas dudas. Aquí resolvemos las más comunes.
           </p>
         </div>
 

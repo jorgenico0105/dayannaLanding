@@ -10,8 +10,14 @@ gsap.registerPlugin(ScrollTrigger);
 const credentials = [
   { icon: "🎓", text: "Licenciada en Psicología Clínica", color: "from-turquoise to-turquoise-dark", bgColor: "bg-turquoise/10" },
   { icon: "🧒", text: "Especialización en Psicología Infantil y del Desarrollo", color: "from-primary to-primary-dark", bgColor: "bg-primary/10" },
-  { icon: "🎨", text: "Terapia de Juego y Técnicas Lúdicas", color: "from-accent to-accent-light", bgColor: "bg-accent/10" },
+  { 
+  icon: "🧩", 
+  text: "Maestría en Dificultades del Aprendizaje y Trastornos del Lenguaje", 
+  color: "from-accent to-accent-light", 
+  bgColor: "bg-accent/10" 
+},
   { icon: "🌿", text: "Formación en Mindfulness para Niños", color: "from-secondary to-secondary-dark", bgColor: "bg-secondary/10" },
+  
 ];
 
 function About() {
@@ -96,11 +102,6 @@ function About() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-dark mb-6">
             Hola, soy <span className="text-gradient">Dayanna Vivanco</span>
           </h2>
-          <p className="text-lg text-dark-light leading-relaxed">
-            Como psicóloga clínica, acompaño a personas en todas las etapas de la vida.
-            Mi pasión especial está en el mundo infantil: creo profundamente en el poder
-            del juego y la conexión para transformar la vida emocional de los pequeños y sus familias.
-          </p>
         </div>
 
         {/* Main content grid */}
@@ -137,7 +138,7 @@ function About() {
                   </div>
                   <div>
                     <div className="text-2xl font-bold text-dark">+300</div>
-                    <div className="text-sm text-dark-light">Niños acompañados</div>
+                    <div className="text-sm text-dark-light">Pacientes acompañados</div>
                   </div>
                 </div>
               </div>
@@ -148,13 +149,13 @@ function About() {
           <div className="order-1 lg:order-2 space-y-8">
             <div className="bg-white rounded-3xl p-8 shadow-medium border border-turquoise/10">
               <h3 className="text-2xl font-bold text-dark mb-4">
-                Mi enfoque con los niños
+                Mi enfoque
               </h3>
               <p className="text-dark-light leading-relaxed mb-6">
-                Mi enfoque es integrador: combino técnicas cognitivo-conductuales,
-                terapia de juego y mindfulness para atender a niños, adolescentes y
-                adultos. Mi mayor especialización está en la infancia — un período clave
-                donde la intervención oportuna hace toda la diferencia.
+                Trabajo desde un enfoque integrador, utilizando herramientas como la
+                terapia cognitivo-conductual, la terapia de juego y mindfulness para acompañar a niños,
+                adolescentes y adultos. Me especializo especialmente en la infancia, una etapa fundamental
+                donde el apoyo adecuado puede transformar el bienestar emocional a largo plazo.
               </p>
               <div className="flex flex-wrap gap-2">
                 {["Empatía", "Juego terapéutico", "Enfoque familiar", "Calidez"].map((tag) => (
