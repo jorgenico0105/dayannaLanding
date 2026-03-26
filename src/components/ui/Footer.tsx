@@ -32,7 +32,7 @@ function Footer() {
           <div>
             <div className="flex items-center gap-1 mb-4">
                      <img
-                    src="/assets/T5.svg"
+                    src="/assets/t6.svg"
                     alt="Dayanna Vivanco - Psicóloga Clínica"
                     className="h-13 w-auto"
                     loading="lazy"
@@ -138,7 +138,7 @@ function Footer() {
         {/* Bottom */}
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white/40 text-sm">
-            © {currentYear} Dayanna Vivanco - Psicóloga Clinica. Todos los derechos reservados.
+            © {currentYear} Dayanna Vivanco - Psicóloga Clínica. Todos los derechos reservados.
           </p>
           <div className="flex items-center gap-2 text-white/40 text-sm">
             <span>Hecho con</span>

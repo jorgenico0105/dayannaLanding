@@ -26,11 +26,11 @@ const faqs = [
 
   {
     question: "¿Las sesiones son presenciales u online?",
-    answer: "Ofrezco ambas modalidades. Las sesiones online son especialmente útiles para niños mayores de 7 años y para sesiones de orientación a padres. Tú eliges lo que mejor se adapte a la familia.",
+    answer: "Ofrezco ambas modalidades. Adaptándome a tus necesidades y disponibilidad. Tú eliges lo que mejor se adapte para ti.",
   },
   {
     question: "¿La información es confidencial?",
-    answer: "Absolutamente. Todo lo tratado en sesión está protegido por el secreto profesional. Comparto información con los padres solo en la medida necesaria para el bienestar del niño, siempre de forma respetuosa.",
+    answer: "Absolutamente. Todo lo tratado en sesión está protegido por el secreto profesional.",
   },
 ];
 
